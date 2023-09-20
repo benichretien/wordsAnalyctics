@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+textarea {
+  all: unset;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e1e8eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 254px;
+  width: 100%;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+}
+
+.first-heading {
+  font-size: 65px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #eee;
+  margin-top: 75px;
+}
+.first-heading--special {
+  font-weight: 300;
+}
+.container {
+  background-color: #fff;
+  width: 1050px;
+  height: 520px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 55px;
+  display: flex;
+  overflow: hidden;
+}
+.textarea {
+  resize: none;
+  flex: 2;
+  font: inherit;
+  padding: 30px 40px;
+  font-size: 22px;
+}
+.textarea::placeholder {
+  font-weight: 500;
+  color: #959c9e;
+}
+.stats {
+  flex: 1.3;
+  background-color: #eee;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.stat {
+  flex: 1 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stat:nth-child(1),
+.stat:nth-child(2) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.stat:nth-child(2),
+.stat:nth-child(4) {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.stat_number {
+  color: #4d5457;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.stat_number_limit {
+  color: red;
+}
+.second-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #747a7c;
+}
+.footer {
+  width: 1050px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.4;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    width: 85vw;
+    flex-direction: column;
+  }
+  .stat:nth-child(1),
+  .stat:nth-child(2),
+  .stat:nth-child(4) {
+    border: none;
+  }
+  .first-heading {
+    font-size: 7vw;
+  }
+  .stat {
+    padding: 15px 10px;
+  }
+  .stat_number {
+    font-size: 20px;
+  }
+  .footer {
+    width: initial;
+    flex-direction: column;
+    align-items: center;
+  }
+}
